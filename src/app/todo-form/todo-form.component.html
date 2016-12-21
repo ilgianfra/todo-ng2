@@ -1,0 +1,10 @@
+<div>
+    <h1>Todo Form</h1>
+    <form (ngSubmit)="onSubmit()" #todoForm="ngForm">
+      <div>
+        <label for="name">Name</label>
+        <input #name type="text" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+</div>
