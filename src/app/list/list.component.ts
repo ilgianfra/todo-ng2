@@ -18,5 +18,8 @@ export class ListComponent implements OnInit {
     this.items = this.todoService.getTodo();
   }
 
+  onDelete(todo) {
+    console.log('in list component', todo);
+  }
 
 }

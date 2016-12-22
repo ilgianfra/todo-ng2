@@ -17,8 +17,8 @@ export class TodoFormComponent implements OnInit {
   }
 
   onSubmit() {
-    let title = this.title.nativeElement.value;
-    let description = this.description.nativeElement.value;
+    let title: string = this.title.nativeElement.value;
+    let description: string = this.description.nativeElement.value;
     this.todoService.addTodo({title, description});
   }
 

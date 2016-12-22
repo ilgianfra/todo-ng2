@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+.flex {
+  display: flex;
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  &.space-around {
+    justify-content: space-around;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.direction-row {
+    flex-direction: row;
+  }
+
+  &.direction-column {
+    flex-direction: column;
+  }
+
+  &.items-center {
+    align-items: center;
+  }
+
+  &.justify-flex-end {
+    justify-content: flex-end;
+  }
+
+  &.align-flex-end {
+    align-items: flex-end;
+  }
+
+  &.flex-wrap {
+    flex-wrap: wrap;
+  }
+}
+.width-100 {
+  width: 100%;
+}
+.padding-l-20{
+  padding-left: 20px;
+}

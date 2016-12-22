@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnChanges } from '@angular/core';
+import { Component, Input, OnInit, Output, OnChanges, EventEmitter } from '@angular/core';
 import { Todo } from '../shared/models/todo.model';
 
 @Component({
@@ -8,6 +8,7 @@ import { Todo } from '../shared/models/todo.model';
 })
 export class ListItemComponent implements OnInit, OnChanges {
   @Input() todo: Todo;
+  @Output() onDelete: EventEmitter<{}> = new EventEmitter();
 
   constructor() { }
 
@@ -15,9 +16,12 @@ export class ListItemComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes) {
-    // if(!changes.isFirstChange()) {
-    //   console.log('Cambi: ', changes);
-    // }
+    if(!changes.todo.isFirstChange()) {
+      console.log('Cambi: ', changes);
+    }
   }
 
+  deleteTodo() {
+    this.onDelete.emit(this.todo);
+  }
 }
