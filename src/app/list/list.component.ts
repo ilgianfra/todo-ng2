@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from '../todo.service';
+import { TodoService } from '../shared/models/todo.service';
+import { Todo } from '../shared/models/todo.model';
 
 @Component({
   selector: 'list',
@@ -7,7 +8,7 @@ import { TodoService } from '../todo.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  items: number[];
+  items: Todo[];
 
   constructor(private todoService: TodoService) {
     this.items = [];
@@ -17,10 +18,5 @@ export class ListComponent implements OnInit {
     this.items = this.todoService.getTodo();
   }
 
-  addItem() {
-    let last = this.items.length;
-    console.log(last);
-    this.items.push(last)
-  }
 
 }

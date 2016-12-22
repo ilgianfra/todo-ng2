@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TodoService } from '../todo.service';
+import { TodoService } from '../shared/models/todo.service';
 
 @Component({
   selector: 'todo-form',

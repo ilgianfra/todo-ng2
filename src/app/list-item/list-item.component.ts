@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
-// import { ListComponent } from '../list/list.component';
+import { Todo } from '../shared/models/todo.model';
 
 @Component({
   selector: 'list-item',
@@ -7,7 +7,7 @@ import { Component, Input, OnInit, OnChanges } from '@angular/core';
   styleUrls: ['./list-item.component.css']
 })
 export class ListItemComponent implements OnInit, OnChanges {
-  @Input() name: string;
+  @Input() todo: Todo;
 
   constructor() { }
 
@@ -15,9 +15,9 @@ export class ListItemComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes) {
-    if(!changes.name.isFirstChange()) {
-      console.log('Cambi: ', changes);
-    }
+    // if(!changes.isFirstChange()) {
+    //   console.log('Cambi: ', changes);
+    // }
   }
 
 }

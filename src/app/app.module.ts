@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
-import { TodoService } from './todo.service';
+import { TodoService } from './shared/models/todo.service';
 import { TodoFormComponent } from './todo-form/todo-form.component';
 
 @NgModule({
