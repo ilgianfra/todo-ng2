@@ -2,8 +2,12 @@
     <h1>Todo Form</h1>
     <form (ngSubmit)="onSubmit()" #todoForm="ngForm">
       <div>
-        <label for="name">Name</label>
-        <input #name type="text" required>
+        <label for="title">Title</label>
+        <input #title type="text" required>
+      </div>
+      <div>
+        <label for="description">Description</label>
+        <input #description type="text" required>
       </div>
       <button type="submit">Submit</button>
     </form>

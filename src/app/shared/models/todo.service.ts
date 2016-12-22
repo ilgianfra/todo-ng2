@@ -4,9 +4,10 @@ import { Todo } from './todo.model';
 
 @Injectable()
 export class TodoService {
+  items: Todo[];
 
   constructor() {
-    // this.items = [1,2,3];
+    this.items = TODOS;
    }
 
   getTodo(): Todo[] {
@@ -14,7 +15,8 @@ export class TodoService {
   }
 
   addTodo(item) {
-    // this.items.push(item);
+    console.log(item);
+    this.items.push(item);
   }
 
 }

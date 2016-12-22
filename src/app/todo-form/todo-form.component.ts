@@ -8,7 +8,8 @@ import { TodoService } from '../shared/models/todo.service';
 })
 export class TodoFormComponent implements OnInit {
   @ViewChild('todoForm') todoForm;
-  @ViewChild('name') name;
+  @ViewChild('title') title;
+  @ViewChild('description') description;
 
   constructor(private todoService: TodoService) { }
 
@@ -16,8 +17,9 @@ export class TodoFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this);
-    this.todoService.addTodo(this.name.nativeElement.value);
+    let title = this.title.nativeElement.value;
+    let description = this.description.nativeElement.value;
+    this.todoService.addTodo({title, description});
   }
 
 }
